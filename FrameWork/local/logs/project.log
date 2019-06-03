@@ -1,0 +1,246 @@
+2019-06-03T02:10:09.115Z - normal: Load ~/.CocosCreator/settings.json
+2019-06-03T02:10:10.207Z - normal: Initializing Asset Database
+2019-06-03T02:10:10.210Z - normal: checking language setting...
+2019-06-03T02:10:10.210Z - normal: Language: zh
+2019-06-03T02:10:10.812Z - success: preview server running at http://localhost:7457
+2019-06-03T02:10:10.815Z - success: protocol editor-framework registered
+2019-06-03T02:10:10.815Z - success: protocol app registered
+2019-06-03T02:10:10.815Z - success: protocol theme registered
+2019-06-03T02:10:10.815Z - success: protocol packages registered
+2019-06-03T02:10:10.815Z - success: protocol uuid registerred
+2019-06-03T02:10:10.815Z - success: protocol db registerred
+2019-06-03T02:10:10.815Z - success: protocol thumbnail registerred
+2019-06-03T02:10:10.815Z - success: protocol unpack registerred
+2019-06-03T02:10:10.815Z - success: protocol disable-commonjs registerred
+2019-06-03T02:10:11.054Z - normal: connected!
+2019-06-03T02:10:11.055Z - normal: Check project E:\workspace\Cocos_FrameWork
+2019-06-03T02:10:11.057Z - normal: Initializing project E:\workspace\Cocos_FrameWork
+2019-06-03T02:10:11.369Z - normal: Initializing Cocos2d
+2019-06-03T02:10:12.013Z - normal: Initializing engine extends
+2019-06-03T02:10:12.029Z - success: asset-db-debugger loaded
+2019-06-03T02:10:12.030Z - success: baidu-adapter loaded
+2019-06-03T02:10:12.031Z - success: code-editor loaded
+2019-06-03T02:10:12.032Z - success: color-picker loaded
+2019-06-03T02:10:12.103Z - success: fb-audience-network loaded
+2019-06-03T02:10:12.144Z - success: fb-live-stream loaded
+2019-06-03T02:10:12.146Z - success: google-play-instant loaded
+2019-06-03T02:10:12.150Z - success: huawei-runtime loaded
+2019-06-03T02:10:12.151Z - success: jsb-adapter loaded
+2019-06-03T02:10:12.154Z - success: oppo-runtime loaded
+2019-06-03T02:10:12.156Z - success: package-manager loaded
+2019-06-03T02:10:12.253Z - success: qqplay-adapter loaded
+2019-06-03T02:10:12.254Z - success: runtime-dev-tools loaded
+2019-06-03T02:10:12.257Z - success: sdkbox loaded
+2019-06-03T02:10:12.259Z - success: tester loaded
+2019-06-03T02:10:12.261Z - success: ui-grid loaded
+2019-06-03T02:10:12.262Z - success: ui-kit-preview-extra loaded
+2019-06-03T02:10:12.264Z - success: ui-kit-preview loaded
+2019-06-03T02:10:12.265Z - success: ui-kit loaded
+2019-06-03T02:10:12.266Z - success: ui-tree loaded
+2019-06-03T02:10:12.269Z - success: vivo-runtime loaded
+2019-06-03T02:10:12.270Z - success: weapp-adapter loaded
+2019-06-03T02:10:12.304Z - success: assets loaded
+2019-06-03T02:10:12.306Z - success: builder loaded
+2019-06-03T02:10:12.517Z - success: cocos-services loaded
+2019-06-03T02:10:12.519Z - success: console loaded
+2019-06-03T02:10:12.547Z - success: fb-instant-games loaded
+2019-06-03T02:10:12.548Z - success: google-instant-games loaded
+2019-06-03T02:10:12.551Z - success: hierarchy loaded
+2019-06-03T02:10:12.553Z - success: inspector loaded
+2019-06-03T02:10:12.554Z - success: keystore loaded
+2019-06-03T02:10:12.557Z - success: node-library loaded
+2019-06-03T02:10:12.558Z - success: package-asset loaded
+2019-06-03T02:10:12.560Z - success: preferences loaded
+2019-06-03T02:10:12.561Z - success: project-exporter loaded
+2019-06-03T02:10:12.562Z - success: project-importer loaded
+2019-06-03T02:10:12.564Z - success: project-settings loaded
+2019-06-03T02:10:12.566Z - success: scene loaded
+2019-06-03T02:10:12.568Z - success: simulator-debugger loaded
+2019-06-03T02:10:12.569Z - success: sprite-editor loaded
+2019-06-03T02:10:12.572Z - success: store loaded
+2019-06-03T02:10:12.575Z - success: timeline loaded
+2019-06-03T02:10:13.480Z - normal: Loading packages
+2019-06-03T02:10:13.484Z - normal: Watching packages
+2019-06-03T02:10:13.914Z - normal: Run Application
+2019-06-03T02:10:14.440Z - info: Cocos Services load base data!
+2019-06-03T02:10:19.264Z - failed: load script [PriceData] failed : Error: Cannot find module 'PriceData'
+    at Module._resolveFilename (module.js:470:15)
+    at Function.Module._resolveFilename [as _resolveFilenameVendor] (D:\CocosCreator\resources\electron.asar\common\reset-search-paths.js:35:12)
+    at Function.s._resolveFilename (D:\CocosCreator\resources\app.asar\editor\page\project-scripts.js:1:941)
+    at Function.Module._load (module.js:418:25)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at Object.cc.require (D:\CocosCreator\resources\app.asar\editor\page\project-scripts.js:1:589)
+    at E:\workspace\Cocos_FrameWork\temp\quick-scripts\assets\scripts\core\DataMap\Goods\GoodsData.js:1:371
+    at __define (E:\workspace\Cocos_FrameWork\temp\quick-scripts\assets\scripts\core\DataMap\Goods\GoodsData.js:7:17)
+    at E:\workspace\Cocos_FrameWork\temp\quick-scripts\assets\scripts\core\DataMap\Goods\GoodsData.js:22:13
+2019-06-03T02:23:29.404Z - normal: Simulator: SCREEN DPI = 96, SCREEN SCALE = 1.00
+2019-06-03T02:23:29.426Z - normal: Simulator: WORKAREA WIDTH 1912.00, HEIGHT 989.00
+2019-06-03T02:23:29.426Z - normal: Simulator: FRAME SCALE = 0.50
+2019-06-03T02:23:29.435Z - normal: Simulator: Ready for GLSL
+2019-06-03T02:23:29.436Z - normal: Simulator: Ready for OpenGL 2.0
+2019-06-03T02:23:29.436Z - normal: Simulator: Project Config:
+2019-06-03T02:23:29.436Z - normal: Simulator:     project dir: D:\CocosCreator\resources\cocos2d-x\simulator\win32\
+2019-06-03T02:23:29.436Z - normal: Simulator:     writable path: $(PROJDIR)\
+2019-06-03T02:23:29.436Z - normal: Simulator:     script file: $(PROJDIR)\main.js
+2019-06-03T02:23:29.436Z - normal: Simulator:     frame size: 750 x 1334
+2019-06-03T02:23:29.437Z - normal: Simulator:     frame scale: 0.50
+2019-06-03T02:23:29.437Z - normal: Simulator:     show console: NO
+2019-06-03T02:23:29.437Z - normal: Simulator:     write debug log: NO ()
+2019-06-03T02:23:29.437Z - normal: Simulator:     listen: 
+2019-06-03T02:23:29.438Z - normal: Simulator:     debugger: none
+2019-06-03T02:23:29.438Z - normal: Simulator:     add searching path:
+2019-06-03T02:23:29.438Z - normal: Simulator: 
+2019-06-03T02:23:29.438Z - normal: Simulator: 
+2019-06-03T02:23:29.438Z - normal: Simulator: 
+2019-06-03T02:23:29.438Z - normal: Simulator: resetDesignResolution request
+2019-06-03T02:23:29.438Z - normal: Simulator: ------------------------------------------------
+2019-06-03T02:23:29.439Z - normal: Simulator: LOAD Js FILE: jsb-adapter/jsb-builtin.js
+2019-06-03T02:23:29.439Z - normal: Simulator: ------------------------------------------------
+2019-06-03T02:23:29.439Z - normal: Simulator: D/jswrapper (368): Initializing V8, version: 6.0.286.52
+2019-06-03T02:23:29.722Z - normal: Simulator: D/jswrapper (813): libuv version: 1.13.1
+2019-06-03T02:23:29.744Z - normal: Simulator: D/jswrapper (112): Debugger listening..., visit [ chrome-devtools://devtools/bundled/inspector.html?v8only=true&ws=0.0.0.0:5086/00010002-0003-4004-8005-000600070008 ] in chrome browser to debug!
+2019-06-03T02:23:29.744Z - normal: Simulator: D/jswrapper (115): For help see https://nodejs.org/en/docs/inspector
+2019-06-03T02:23:29.783Z - normal: Simulator: D/jswrapper (129): JS: Enable batch GL commands optimization!
+2019-06-03T02:23:29.783Z - normal: Simulator: resetDesignResolution request
+2019-06-03T02:23:29.783Z - normal: Simulator: ------------------------------------------------
+2019-06-03T02:23:29.783Z - normal: Simulator: LOAD Js FILE: main.js
+2019-06-03T02:23:29.783Z - normal: Simulator: ------------------------------------------------
+2019-06-03T02:23:30.076Z - normal: Simulator: iShow!
+2019-06-03T02:23:30.096Z - normal: Simulator: D/jswrapper (4159): glGetIntegerv: pname: 0x8b4c
+2019-06-03T02:23:30.107Z - normal: Simulator: D/jswrapper (129): JS: Cocos Creator v2.0.9
+2019-06-03T02:23:30.248Z - normal: Simulator: D/jswrapper (129): JS: [WARN]: Since 1.10, `cc.audioEngine` accept cc.AudioClip instance directly, not a URL string. Please directly reference the AudioClip object in your script, or load cc.AudioClip by loader first. Don't use audio's URL anymore.
+2019-06-03T02:23:30.379Z - error: Simulator: E/jswrapper (271): ERROR: Uncaught TypeError: Cannot read property 'ParseFinish' of undefined, location: assets/scripts/core/DataMap/MapDataMgr.js:0:0
+STACK:
+[0]anonymous@assets/scripts/core/DataMap/MapDataMgr.js:38
+[1]anonymous@assets/scripts/core/DataMap/Goods/GoodMapDecoder.js:39
+[2]anonymous@src/cocos2d-jsb.js:21038
+[3]anonymous@src/cocos2d-jsb.js:20934
+[4]anonymous@src/cocos2d-jsb.js:30249
+[5]fireTimeout@jsb-adapter/jsb-builtin.js:2033
+[6]tick@jsb-adapter/jsb-builtin.js:1995
+E/jswrapper (534): [ERROR] (..\cocos\scripting\js-bindings\jswrapper\v8\Object.cpp, 534): Invoking function (0FCAA878) failed!
+    at HTMLElement.print-simulator-log (D:\CocosCreator\resources\app.asar\editor\builtin\scene\panel\messages\scene.js:1:1501)
+    at Object.e._dispatch (D:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\panel.js:1:1941)
+    at EventEmitter.o.on.s (D:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:2917)
+    at emitMany (events.js:127:13)
+    at EventEmitter.emit (events.js:204:7)
+2019-06-03T02:23:33.282Z - normal: Simulator: D/jswrapper (452): ScriptEngine::cleanup begin ...
+2019-06-03T02:23:33.282Z - normal: Simulator: D/jswrapper (593): GC begin ..., (js->native map) size: 13, all objects: 86
+2019-06-03T02:23:33.325Z - normal: Simulator: D/jswrapper (601): GC end ..., (js->native map) size: 13, all objects: 86
+2019-06-03T02:23:33.325Z - normal: Simulator: D/jswrapper (593): GC begin ..., (js->native map) size: 13, all objects: 86
+2019-06-03T02:23:33.365Z - normal: Simulator: D/jswrapper (601): GC end ..., (js->native map) size: 13, all objects: 86
+2019-06-03T02:23:33.383Z - normal: Simulator: D/jswrapper (270): Destroy WebGLBuffer (4) by GC
+2019-06-03T02:23:33.400Z - normal: Simulator: D/jswrapper (270): Destroy WebGLBuffer (2) by GC
+2019-06-03T02:23:33.400Z - normal: Simulator: D/jswrapper (270): Destroy WebGLBuffer (1) by GC
+2019-06-03T02:23:33.400Z - normal: Simulator: D/jswrapper (251): Destroy WebGLTexture (1) by GC
+2019-06-03T02:23:33.401Z - normal: Simulator: D/jswrapper (270): Destroy WebGLBuffer (3) by GC
+2019-06-03T02:23:33.401Z - normal: Simulator: D/jswrapper (251): Destroy WebGLTexture (2) by GC
+2019-06-03T02:23:33.401Z - normal: Simulator: D/jswrapper (327): Destroy WebGLProgram (3) by GC
+2019-06-03T02:23:33.401Z - normal: Simulator: D/jswrapper (593): GC begin ..., (js->native map) size: 0, all objects: 0
+2019-06-03T02:23:33.435Z - normal: Simulator: D/jswrapper (601): GC end ..., (js->native map) size: 0, all objects: 0
+2019-06-03T02:23:33.443Z - normal: Simulator: D/jswrapper (515): ScriptEngine::cleanup end ...
+2019-06-03T02:26:13.471Z - normal: Simulator: SCREEN DPI = 96, SCREEN SCALE = 1.00
+2019-06-03T02:26:13.472Z - normal: Simulator: WORKAREA WIDTH 1912.00, HEIGHT 989.00
+2019-06-03T02:26:13.472Z - normal: Simulator: FRAME SCALE = 0.50
+2019-06-03T02:26:13.533Z - normal: Simulator: Ready for GLSL
+2019-06-03T02:26:13.533Z - normal: Simulator: Ready for OpenGL 2.0
+2019-06-03T02:26:13.535Z - normal: Simulator: Project Config:
+2019-06-03T02:26:13.535Z - normal: Simulator:     project dir: D:\CocosCreator\resources\cocos2d-x\simulator\win32\
+2019-06-03T02:26:13.535Z - normal: Simulator:     writable path: $(PROJDIR)\
+2019-06-03T02:26:13.535Z - normal: Simulator:     script file: $(PROJDIR)\main.js
+2019-06-03T02:26:13.535Z - normal: Simulator:     frame size: 750 x 1334
+2019-06-03T02:26:13.536Z - normal: Simulator:     frame scale: 0.50
+2019-06-03T02:26:13.536Z - normal: Simulator:     show console: NO
+2019-06-03T02:26:13.536Z - normal: Simulator:     write debug log: NO ()
+2019-06-03T02:26:13.537Z - normal: Simulator:     listen: 
+2019-06-03T02:26:13.537Z - normal: Simulator:     debugger: none
+2019-06-03T02:26:13.537Z - normal: Simulator:     add searching path:
+2019-06-03T02:26:13.538Z - normal: Simulator: 
+2019-06-03T02:26:13.538Z - normal: Simulator: 
+2019-06-03T02:26:13.538Z - normal: Simulator: 
+2019-06-03T02:26:13.538Z - normal: Simulator: resetDesignResolution request
+2019-06-03T02:26:13.538Z - normal: Simulator: ------------------------------------------------
+2019-06-03T02:26:13.538Z - normal: Simulator: LOAD Js FILE: jsb-adapter/jsb-builtin.js
+2019-06-03T02:26:13.538Z - normal: Simulator: ------------------------------------------------
+2019-06-03T02:26:13.538Z - normal: Simulator: D/jswrapper (368): Initializing V8, version: 6.0.286.52
+2019-06-03T02:26:13.826Z - normal: Simulator: D/jswrapper (813): libuv version: 1.13.1
+2019-06-03T02:26:13.848Z - normal: Simulator: D/jswrapper (112): Debugger listening..., visit [ chrome-devtools://devtools/bundled/inspector.html?v8only=true&ws=0.0.0.0:5086/00010002-0003-4004-8005-000600070008 ] in chrome browser to debug!
+2019-06-03T02:26:13.849Z - normal: Simulator: D/jswrapper (115): For help see https://nodejs.org/en/docs/inspector
+2019-06-03T02:26:13.883Z - normal: Simulator: D/jswrapper (129): JS: Enable batch GL commands optimization!
+2019-06-03T02:26:13.884Z - normal: Simulator: resetDesignResolution request
+2019-06-03T02:26:13.884Z - normal: Simulator: ------------------------------------------------
+2019-06-03T02:26:13.884Z - normal: Simulator: LOAD Js FILE: main.js
+2019-06-03T02:26:13.884Z - normal: Simulator: ------------------------------------------------
+2019-06-03T02:26:14.173Z - normal: Simulator: iShow!
+2019-06-03T02:26:14.190Z - normal: Simulator: D/jswrapper (4159): glGetIntegerv: pname: 0x8b4c
+2019-06-03T02:26:14.199Z - normal: Simulator: D/jswrapper (129): JS: Cocos Creator v2.0.9
+2019-06-03T02:26:14.315Z - normal: Simulator: D/jswrapper (129): JS: [WARN]: Since 1.10, `cc.audioEngine` accept cc.AudioClip instance directly, not a URL string. Please directly reference the AudioClip object in your script, or load cc.AudioClip by loader first. Don't use audio's URL anymore.
+2019-06-03T02:26:16.464Z - normal: Simulator: D/jswrapper (452): ScriptEngine::cleanup begin ...
+2019-06-03T02:26:16.464Z - normal: Simulator: D/jswrapper (593): GC begin ..., (js->native map) size: 13, all objects: 86
+2019-06-03T02:26:16.506Z - normal: Simulator: D/jswrapper (601): GC end ..., (js->native map) size: 13, all objects: 86
+2019-06-03T02:26:16.506Z - normal: Simulator: D/jswrapper (593): GC begin ..., (js->native map) size: 13, all objects: 86
+2019-06-03T02:26:16.538Z - normal: Simulator: D/jswrapper (601): GC end ..., (js->native map) size: 13, all objects: 86
+2019-06-03T02:26:16.539Z - normal: Simulator: D/jswrapper (270): Destroy WebGLBuffer (3) by GC
+2019-06-03T02:26:16.539Z - normal: Simulator: D/jswrapper (270): Destroy WebGLBuffer (4) by GC
+2019-06-03T02:26:16.539Z - normal: Simulator: D/jswrapper (270): Destroy WebGLBuffer (2) by GC
+2019-06-03T02:26:16.539Z - normal: Simulator: D/jswrapper (270): Destroy WebGLBuffer (1) by GC
+2019-06-03T02:26:16.539Z - normal: Simulator: D/jswrapper (251): Destroy WebGLTexture (1) by GC
+2019-06-03T02:26:16.539Z - normal: Simulator: D/jswrapper (251): Destroy WebGLTexture (2) by GC
+2019-06-03T02:26:16.539Z - normal: Simulator: D/jswrapper (327): Destroy WebGLProgram (3) by GC
+2019-06-03T02:26:16.539Z - normal: Simulator: D/jswrapper (593): GC begin ..., (js->native map) size: 0, all objects: 0
+2019-06-03T02:26:16.572Z - normal: Simulator: D/jswrapper (601): GC end ..., (js->native map) size: 0, all objects: 0
+2019-06-03T02:26:16.576Z - normal: Simulator: D/jswrapper (515): ScriptEngine::cleanup end ...
+2019-06-03T02:29:42.326Z - normal: Simulator: SCREEN DPI = 96, SCREEN SCALE = 1.00
+2019-06-03T02:29:42.327Z - normal: Simulator: WORKAREA WIDTH 1912.00, HEIGHT 989.00
+2019-06-03T02:29:42.327Z - normal: Simulator: FRAME SCALE = 0.50
+2019-06-03T02:29:42.388Z - normal: Simulator: Ready for GLSL
+2019-06-03T02:29:42.389Z - normal: Simulator: Ready for OpenGL 2.0
+2019-06-03T02:29:42.391Z - normal: Simulator: Project Config:
+2019-06-03T02:29:42.391Z - normal: Simulator:     project dir: D:\CocosCreator\resources\cocos2d-x\simulator\win32\
+2019-06-03T02:29:42.391Z - normal: Simulator:     writable path: $(PROJDIR)\
+2019-06-03T02:29:42.392Z - normal: Simulator:     script file: $(PROJDIR)\main.js
+2019-06-03T02:29:42.392Z - normal: Simulator:     frame size: 750 x 1334
+2019-06-03T02:29:42.392Z - normal: Simulator:     frame scale: 0.50
+2019-06-03T02:29:42.392Z - normal: Simulator:     show console: NO
+2019-06-03T02:29:42.392Z - normal: Simulator:     write debug log: NO ()
+2019-06-03T02:29:42.392Z - normal: Simulator:     listen: 
+2019-06-03T02:29:42.392Z - normal: Simulator:     debugger: none
+2019-06-03T02:29:42.392Z - normal: Simulator:     add searching path:
+2019-06-03T02:29:42.392Z - normal: Simulator: 
+2019-06-03T02:29:42.392Z - normal: Simulator: 
+2019-06-03T02:29:42.392Z - normal: Simulator: 
+2019-06-03T02:29:42.393Z - normal: Simulator: resetDesignResolution request
+2019-06-03T02:29:42.393Z - normal: Simulator: ------------------------------------------------
+2019-06-03T02:29:42.393Z - normal: Simulator: LOAD Js FILE: jsb-adapter/jsb-builtin.js
+2019-06-03T02:29:42.393Z - normal: Simulator: ------------------------------------------------
+2019-06-03T02:29:42.393Z - normal: Simulator: D/jswrapper (368): Initializing V8, version: 6.0.286.52
+2019-06-03T02:29:42.680Z - normal: Simulator: D/jswrapper (813): libuv version: 1.13.1
+2019-06-03T02:29:42.702Z - normal: Simulator: D/jswrapper (112): Debugger listening..., visit [ chrome-devtools://devtools/bundled/inspector.html?v8only=true&ws=0.0.0.0:5086/00010002-0003-4004-8005-000600070008 ] in chrome browser to debug!
+2019-06-03T02:29:42.702Z - normal: Simulator: D/jswrapper (115): For help see https://nodejs.org/en/docs/inspector
+2019-06-03T02:29:42.738Z - normal: Simulator: D/jswrapper (129): JS: Enable batch GL commands optimization!
+2019-06-03T02:29:42.739Z - normal: Simulator: resetDesignResolution request
+2019-06-03T02:29:42.739Z - normal: Simulator: ------------------------------------------------
+2019-06-03T02:29:42.739Z - normal: Simulator: LOAD Js FILE: main.js
+2019-06-03T02:29:42.739Z - normal: Simulator: ------------------------------------------------
+2019-06-03T02:29:43.023Z - normal: Simulator: iShow!
+2019-06-03T02:29:43.037Z - normal: Simulator: D/jswrapper (4159): glGetIntegerv: pname: 0x8b4c
+2019-06-03T02:29:43.048Z - normal: Simulator: D/jswrapper (129): JS: Cocos Creator v2.0.9
+2019-06-03T02:29:43.165Z - normal: Simulator: D/jswrapper (129): JS: [WARN]: Since 1.10, `cc.audioEngine` accept cc.AudioClip instance directly, not a URL string. Please directly reference the AudioClip object in your script, or load cc.AudioClip by loader first. Don't use audio's URL anymore.
+2019-06-03T02:29:43.300Z - normal: Simulator: D/jswrapper (129): JS: 解析完成
+2019-06-03T02:29:44.968Z - normal: Simulator: D/jswrapper (452): ScriptEngine::cleanup begin ...
+2019-06-03T02:29:44.968Z - normal: Simulator: D/jswrapper (593): GC begin ..., (js->native map) size: 13, all objects: 86
+2019-06-03T02:29:45.008Z - normal: Simulator: D/jswrapper (601): GC end ..., (js->native map) size: 13, all objects: 86
+2019-06-03T02:29:45.008Z - normal: Simulator: D/jswrapper (593): GC begin ..., (js->native map) size: 13, all objects: 86
+2019-06-03T02:29:45.040Z - normal: Simulator: D/jswrapper (601): GC end ..., (js->native map) size: 13, all objects: 86
+2019-06-03T02:29:45.042Z - normal: Simulator: D/jswrapper (270): Destroy WebGLBuffer (4) by GC
+2019-06-03T02:29:45.042Z - normal: Simulator: D/jswrapper (270): Destroy WebGLBuffer (1) by GC
+2019-06-03T02:29:45.042Z - normal: Simulator: D/jswrapper (270): Destroy WebGLBuffer (2) by GC
+2019-06-03T02:29:45.042Z - normal: Simulator: D/jswrapper (270): Destroy WebGLBuffer (3) by GC
+2019-06-03T02:29:45.042Z - normal: Simulator: D/jswrapper (251): Destroy WebGLTexture (1) by GC
+2019-06-03T02:29:45.042Z - normal: Simulator: D/jswrapper (251): Destroy WebGLTexture (2) by GC
+2019-06-03T02:29:45.042Z - normal: Simulator: D/jswrapper (327): Destroy WebGLProgram (3) by GC
+2019-06-03T02:29:45.042Z - normal: Simulator: D/jswrapper (593): GC begin ..., (js->native map) size: 0, all objects: 0
+2019-06-03T02:29:45.074Z - normal: Simulator: D/jswrapper (601): GC end ..., (js->native map) size: 0, all objects: 0
+2019-06-03T02:29:45.077Z - normal: Simulator: D/jswrapper (515): ScriptEngine::cleanup end ...
+2019-06-03T02:30:13.558Z - info: shutdown preview server

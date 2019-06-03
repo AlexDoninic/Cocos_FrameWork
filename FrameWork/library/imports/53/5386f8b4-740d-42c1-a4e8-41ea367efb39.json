@@ -1,0 +1,16 @@
+{
+  "__type__": "cc.JsonAsset",
+  "_name": "goods",
+  "_objFlags": 0,
+  "_native": "",
+  "json": {
+    "goods": [
+      {
+        "goodsId": 1,
+        "icon": "bitcode",
+        "name": "text_bitcode",
+        "price": 2000
+      }
+    ]
+  }
+}

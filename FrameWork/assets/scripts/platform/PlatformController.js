@@ -78,8 +78,6 @@ var PlatformController = cc.Class({
         		this.leftPos = sysInfo.windowWidth * leftRatio;
         		this.topPos = sysInfo.windowHeight * topRatio;
 
-        		console.log(this.topPos + "  ================创建游戏圈按钮===============" + this.leftPos);
-
         		var self = this;
         		this.gameClubBtn = wx.createGameClubButton({
         			icon:'green',
@@ -263,6 +261,18 @@ var PlatformController = cc.Class({
 	            })
 	        }  
 	    },
+
+	    //打开客服对话
+	    OpenServiceConversation:function(){
+	    	if(this.platform == "wx")
+	    	{
+	    		wx.openCustomerServiceConversation({
+	    			sessionFrom:'',
+	    			showMessageCard:true,
+	    		});
+	    	}
+	    },
+
 	    //微信开放数据存储 score 代表当前要保存的东西
 	    setUserCloudStorage:function(socre) 
 	    {

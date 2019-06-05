@@ -364,11 +364,6 @@
     "meta": 1559528771322,
     "relativePath": "scripts\\core\\Event.js"
   },
-  "121601ba-2009-436d-90f5-89255580df10": {
-    "asset": 1559610383584,
-    "meta": 1559610409639,
-    "relativePath": "scripts\\platform\\PlatformController.js"
-  },
   "dfd6a40c-a444-41fb-9092-445f9be33ece": {
     "asset": 1559727255613,
     "meta": 1559727267566,
@@ -393,5 +388,10 @@
     "asset": 1559727307658,
     "meta": 1559727338411,
     "relativePath": "scripts\\core\\DataMap\\MapDataMgr.js"
+  },
+  "121601ba-2009-436d-90f5-89255580df10": {
+    "asset": 1559729408256,
+    "meta": 1559730291181,
+    "relativePath": "scripts\\platform\\PlatformController.js"
   }
 }

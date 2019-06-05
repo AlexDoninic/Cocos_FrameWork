@@ -1,68 +1,68 @@
-2019-06-05T09:11:55.307Z - normal: Load ~/.CocosCreator/settings.json
-2019-06-05T09:11:56.467Z - normal: Initializing Asset Database
-2019-06-05T09:11:56.468Z - normal: checking language setting...
-2019-06-05T09:11:56.468Z - normal: Language: zh
-2019-06-05T09:11:56.972Z - success: preview server running at http://localhost:7456
-2019-06-05T09:11:56.974Z - success: protocol editor-framework registered
-2019-06-05T09:11:56.974Z - success: protocol app registered
-2019-06-05T09:11:56.974Z - success: protocol theme registered
-2019-06-05T09:11:56.974Z - success: protocol packages registered
-2019-06-05T09:11:56.974Z - success: protocol uuid registerred
-2019-06-05T09:11:56.974Z - success: protocol db registerred
-2019-06-05T09:11:56.974Z - success: protocol thumbnail registerred
-2019-06-05T09:11:56.974Z - success: protocol unpack registerred
-2019-06-05T09:11:56.975Z - success: protocol disable-commonjs registerred
-2019-06-05T09:11:57.370Z - normal: connected!
-2019-06-05T09:11:57.373Z - normal: Check project E:\workspace\Cocos_FrameWork
-2019-06-05T09:11:57.378Z - normal: Initializing project E:\workspace\Cocos_FrameWork
-2019-06-05T09:11:57.677Z - normal: Initializing Cocos2d
-2019-06-05T09:11:58.287Z - normal: Initializing engine extends
-2019-06-05T09:11:58.301Z - success: asset-db-debugger loaded
-2019-06-05T09:11:58.302Z - success: baidu-adapter loaded
-2019-06-05T09:11:58.303Z - success: color-picker loaded
-2019-06-05T09:11:58.369Z - success: fb-audience-network loaded
-2019-06-05T09:11:58.407Z - success: fb-live-stream loaded
-2019-06-05T09:11:58.409Z - success: google-play-instant loaded
-2019-06-05T09:11:58.413Z - success: huawei-runtime loaded
-2019-06-05T09:11:58.593Z - success: cpk-publish loaded
-2019-06-05T09:11:58.594Z - success: jsb-adapter loaded
-2019-06-05T09:11:58.597Z - success: oppo-runtime loaded
-2019-06-05T09:11:58.599Z - success: package-manager loaded
-2019-06-05T09:11:58.684Z - success: qqplay-adapter loaded
-2019-06-05T09:11:58.685Z - success: runtime-dev-tools loaded
-2019-06-05T09:11:58.688Z - success: sdkbox loaded
-2019-06-05T09:11:58.690Z - success: tester loaded
-2019-06-05T09:11:58.691Z - success: ui-grid loaded
-2019-06-05T09:11:58.692Z - success: ui-kit-preview-extra loaded
-2019-06-05T09:11:58.693Z - success: ui-kit-preview loaded
-2019-06-05T09:11:58.694Z - success: ui-kit loaded
-2019-06-05T09:11:58.696Z - success: ui-tree loaded
-2019-06-05T09:11:58.704Z - success: vivo-runtime loaded
-2019-06-05T09:11:58.704Z - success: weapp-adapter loaded
-2019-06-05T09:11:58.705Z - success: xiaomi-adapter loaded
-2019-06-05T09:11:58.742Z - success: assets loaded
-2019-06-05T09:11:58.743Z - success: builder loaded
-2019-06-05T09:11:58.938Z - success: cocos-services loaded
-2019-06-05T09:11:58.941Z - success: console loaded
-2019-06-05T09:11:58.968Z - success: fb-instant-games loaded
-2019-06-05T09:11:58.969Z - success: google-instant-games loaded
-2019-06-05T09:11:58.971Z - success: hierarchy loaded
-2019-06-05T09:11:58.973Z - success: inspector loaded
-2019-06-05T09:11:58.974Z - success: keystore loaded
-2019-06-05T09:11:58.976Z - success: node-library loaded
-2019-06-05T09:11:58.978Z - success: package-asset loaded
-2019-06-05T09:11:58.978Z - success: preferences loaded
-2019-06-05T09:11:58.979Z - success: project-exporter loaded
-2019-06-05T09:11:58.981Z - success: project-importer loaded
-2019-06-05T09:11:58.982Z - success: project-settings loaded
-2019-06-05T09:11:58.984Z - success: scene loaded
-2019-06-05T09:11:58.985Z - success: simulator-debugger loaded
-2019-06-05T09:11:58.986Z - success: sprite-editor loaded
-2019-06-05T09:11:58.988Z - success: store loaded
-2019-06-05T09:11:58.990Z - success: timeline loaded
-2019-06-05T09:11:58.995Z - success: xiaomi-runtime loaded
-2019-06-05T09:11:59.688Z - normal: Loading packages
-2019-06-05T09:11:59.693Z - normal: Watching packages
-2019-06-05T09:12:00.028Z - normal: Run Application
-2019-06-05T09:12:00.803Z - info: Cocos Services load base data!
-2019-06-05T09:35:42.096Z - info: shutdown preview server
+2019-06-05T09:38:06.339Z - normal: Load ~/.CocosCreator/settings.json
+2019-06-05T09:38:07.467Z - normal: Initializing Asset Database
+2019-06-05T09:38:07.468Z - normal: checking language setting...
+2019-06-05T09:38:07.469Z - normal: Language: zh
+2019-06-05T09:38:07.969Z - success: preview server running at http://localhost:7456
+2019-06-05T09:38:07.971Z - success: protocol editor-framework registered
+2019-06-05T09:38:07.971Z - success: protocol app registered
+2019-06-05T09:38:07.971Z - success: protocol theme registered
+2019-06-05T09:38:07.971Z - success: protocol packages registered
+2019-06-05T09:38:07.971Z - success: protocol uuid registerred
+2019-06-05T09:38:07.971Z - success: protocol db registerred
+2019-06-05T09:38:07.971Z - success: protocol thumbnail registerred
+2019-06-05T09:38:07.971Z - success: protocol unpack registerred
+2019-06-05T09:38:07.971Z - success: protocol disable-commonjs registerred
+2019-06-05T09:38:08.190Z - normal: connected!
+2019-06-05T09:38:08.194Z - normal: Check project E:\workspace\Cocos_FrameWork
+2019-06-05T09:38:08.199Z - normal: Initializing project E:\workspace\Cocos_FrameWork
+2019-06-05T09:38:08.506Z - normal: Initializing Cocos2d
+2019-06-05T09:38:09.117Z - normal: Initializing engine extends
+2019-06-05T09:38:09.132Z - success: asset-db-debugger loaded
+2019-06-05T09:38:09.133Z - success: baidu-adapter loaded
+2019-06-05T09:38:09.134Z - success: color-picker loaded
+2019-06-05T09:38:09.200Z - success: fb-audience-network loaded
+2019-06-05T09:38:09.239Z - success: fb-live-stream loaded
+2019-06-05T09:38:09.242Z - success: google-play-instant loaded
+2019-06-05T09:38:09.246Z - success: huawei-runtime loaded
+2019-06-05T09:38:09.429Z - success: cpk-publish loaded
+2019-06-05T09:38:09.430Z - success: jsb-adapter loaded
+2019-06-05T09:38:09.433Z - success: oppo-runtime loaded
+2019-06-05T09:38:09.435Z - success: package-manager loaded
+2019-06-05T09:38:09.519Z - success: qqplay-adapter loaded
+2019-06-05T09:38:09.520Z - success: runtime-dev-tools loaded
+2019-06-05T09:38:09.523Z - success: sdkbox loaded
+2019-06-05T09:38:09.525Z - success: tester loaded
+2019-06-05T09:38:09.526Z - success: ui-grid loaded
+2019-06-05T09:38:09.527Z - success: ui-kit-preview-extra loaded
+2019-06-05T09:38:09.528Z - success: ui-kit-preview loaded
+2019-06-05T09:38:09.530Z - success: ui-kit loaded
+2019-06-05T09:38:09.531Z - success: ui-tree loaded
+2019-06-05T09:38:09.539Z - success: vivo-runtime loaded
+2019-06-05T09:38:09.540Z - success: weapp-adapter loaded
+2019-06-05T09:38:09.540Z - success: xiaomi-adapter loaded
+2019-06-05T09:38:09.577Z - success: assets loaded
+2019-06-05T09:38:09.579Z - success: builder loaded
+2019-06-05T09:38:09.775Z - success: cocos-services loaded
+2019-06-05T09:38:09.778Z - success: console loaded
+2019-06-05T09:38:09.816Z - success: fb-instant-games loaded
+2019-06-05T09:38:09.817Z - success: google-instant-games loaded
+2019-06-05T09:38:09.820Z - success: hierarchy loaded
+2019-06-05T09:38:09.822Z - success: inspector loaded
+2019-06-05T09:38:09.823Z - success: keystore loaded
+2019-06-05T09:38:09.826Z - success: node-library loaded
+2019-06-05T09:38:09.827Z - success: package-asset loaded
+2019-06-05T09:38:09.828Z - success: preferences loaded
+2019-06-05T09:38:09.829Z - success: project-exporter loaded
+2019-06-05T09:38:09.830Z - success: project-importer loaded
+2019-06-05T09:38:09.831Z - success: project-settings loaded
+2019-06-05T09:38:09.834Z - success: scene loaded
+2019-06-05T09:38:09.835Z - success: simulator-debugger loaded
+2019-06-05T09:38:09.836Z - success: sprite-editor loaded
+2019-06-05T09:38:09.838Z - success: store loaded
+2019-06-05T09:38:09.840Z - success: timeline loaded
+2019-06-05T09:38:09.844Z - success: xiaomi-runtime loaded
+2019-06-05T09:38:10.582Z - normal: Loading packages
+2019-06-05T09:38:10.587Z - normal: Watching packages
+2019-06-05T09:38:10.921Z - normal: Run Application
+2019-06-05T09:38:11.346Z - info: Cocos Services load base data!
+2019-06-05T10:25:02.952Z - info: shutdown preview server

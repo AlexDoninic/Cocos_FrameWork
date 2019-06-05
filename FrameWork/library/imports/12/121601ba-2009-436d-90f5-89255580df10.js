@@ -25,7 +25,6 @@ var PlatformController = cc.Class({
 				}
 				return false;
 			} else if (this.platform == "tt") {}
-
 			return true;
 		},
 
@@ -34,7 +33,7 @@ var PlatformController = cc.Class({
 			if (this.platform == "baidu") {
 				swan.login({
 					success: function success() {
-						self.setUserCloudStorage(cc.Mgr.UserDataMgr.HistoryHighAssets);
+						//登陆成功后执行某个操作
 					},
 					fail: function fail() {
 						swan.showModal({
@@ -53,7 +52,27 @@ var PlatformController = cc.Class({
 						});
 					}
 				});
-			} else if (this.platform == "tt") {}
+			} else if (this.platform == "tt") {
+				tt.login({
+					success: function success(res) {},
+					fail: function fail(res) {
+						tt.showModal({
+							title: "登录失败",
+							content: "是否重新登录？",
+							cancelText: "退出游戏",
+							success: function success(res) {
+								if (res.confirm) {
+									console.log("点击了确定");
+									self.Login();
+								} else if (res.cancel) {
+									console.log("点击了取消");
+									tt.exit();
+								}
+							}
+						});
+					}
+				});
+			}
 			return true;
 		},
 
@@ -131,7 +150,6 @@ var PlatformController = cc.Class({
 			if (this.platform == "wx") {
 				wx.showShareMenu({ withShareTicket: true });
 				wx.onShareAppMessage(function () {
-					// 用户点击了“转发”按钮
 					return {
 						title: info.text,
 						//imageUrlId: '',
@@ -141,9 +159,8 @@ var PlatformController = cc.Class({
 			} else if (this.platform == "tt") {
 				tt.showShareMenu(false);
 				tt.onShareAppMessage(function () {
-					// 用户点击了“转发”按钮
 					return {
-						title: '沙雕,这个游戏你能玩下去吗',
+						title: info.text,
 						//imageUrlId: 'Ik14RZj7SV2BtigrtE3d1g',
 						imageUrl: ''
 					};
@@ -151,9 +168,9 @@ var PlatformController = cc.Class({
 			} else if (this.platform == "baidu") {
 				swan.showShareMenu(false);
 				swan.onShareAppMessage(function () {
-					// 用户点击了“转发”按钮
 					return {
 						title: info.text,
+						//imageUrlId: 'Ik14RZj7SV2BtigrtE3d1g',
 						imageUrl: info.url
 					};
 				});
@@ -162,28 +179,31 @@ var PlatformController = cc.Class({
 
 		//转发一段文本
 		ShareToFriendTxt: function ShareToFriendTxt(str) {
+			console.log("点击了分享啊");
+			var info = cc.Mgr.ShareInfos.getShareInfos(1);
 			if (this.platform == "wx") {
-				console.log("点击了分享啊");
 				wx.shareAppMessage({
-					title: str
+					title: str,
+					imageUrl: info.url
 				});
 			} else if (this.platform == "tt") {
 				tt.shareAppMessage({
-					title: str
+					title: str,
+					imageUrl: info.url
 				});
 			} else if (this.platform == "baidu") {
-				console.log("点击了分享啊");
 				swan.shareAppMessage({
-					title: str
+					title: str,
+					imageUrl: info.url
 				});
 			}
 		},
 
 		//自定义转发
 		ShareToFriend: function ShareToFriend(index) {
+			console.log("点击了分享啊");
 			var info = cc.Mgr.ShareInfos.getShareInfos(index);
 			if (this.platform == "wx") {
-				console.log("点击了分享啊");
 				wx.shareAppMessage({
 					title: info.text,
 					imageUrl: info.url
@@ -194,7 +214,6 @@ var PlatformController = cc.Class({
 					imageUrl: info.url
 				});
 			} else if (this.platform == "baidu") {
-				console.log("点击了分享啊");
 				swan.shareAppMessage({
 					title: info.text,
 					imageUrl: info.url
@@ -207,19 +226,19 @@ var PlatformController = cc.Class({
 			if (this.platform == "wx") {
 				wx.showToast({
 					title: text,
-					icon: 'success',
+					icon: 'none',
 					duration: 2000
 				});
 			} else if (this.platform == "tt") {
 				tt.showToast({
 					title: text,
-					icon: 'success',
+					icon: 'none',
 					duration: 2000
 				});
 			} else if (this.platform == "baidu") {
 				swan.showToast({
 					title: text,
-					icon: 'success',
+					icon: 'none',
 					duration: 2000
 				});
 			}
@@ -232,6 +251,8 @@ var PlatformController = cc.Class({
 					sessionFrom: '',
 					showMessageCard: true
 				});
+			} else if (this.platform == "baidu") {
+				swan.openCustomerServiceConversation({});
 			}
 		},
 
@@ -450,7 +471,7 @@ var PlatformController = cc.Class({
 			}
 		},
 
-		//跳转到其他小程序
+		//跳转到其他小程序  要到对应 app.json 或者 game.json 中添加列表
 		JumpToOtherApp: function JumpToOtherApp(appId) {
 			if (this.platform == "wx") {
 				wx.navigateToMiniProgram({
@@ -460,7 +481,22 @@ var PlatformController = cc.Class({
 						console.log("成功打开了其他小程序");
 					}
 				});
-			} else if (this.platform == "baidu") {} else if (this.platform == "tt") {}
+			} else if (this.platform == "baidu") {
+				swan.navigateToMiniProgram({
+					appKey: appId,
+					success: function success(res) {
+						console.log("成功打开了其他小程序");
+					}
+				});
+			} else if (this.platform == "tt") {
+				tt.navigateToMiniProgram({
+					appId: appId,
+					envVersion: 'release',
+					success: function success(res) {
+						console.log("成功打开了其他小程序");
+					}
+				});
+			}
 		},
 
 		//震屏功能  长震动还是短震动

@@ -1,0 +1,18 @@
+{
+  "certificatePath": "",
+  "deviceOrientation": "portrait",
+  "disabledMode": "disabled is-disabled",
+  "icon": "",
+  "logLevel": "log",
+  "minPlatformVersion": "",
+  "name": "",
+  "npmPath": "",
+  "package": "",
+  "privatePath": "",
+  "showNpmPath": false,
+  "tinyPackageMode": false,
+  "tinyPackageServer": "",
+  "useDebugKey": true,
+  "versionCode": "",
+  "versionName": ""
+}

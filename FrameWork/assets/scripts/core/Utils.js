@@ -27,12 +27,12 @@ var Utils = cc.Class({
 
             return out;
         },
-
+        //获取系统时间
         GetSysTime:function(){
             var timestamp = Math.round(new Date() / 1000) - (3600 * 24 * 365 * 49);
             return timestamp;
         },
-
+        //格式化数值
         FormatNum:function(num){
             num = num +'';
             var str = "";
@@ -48,7 +48,7 @@ var Utils = cc.Class({
                 return out.splice(0,1)
             return out;
         },
-
+        //获取翻译字段
         getTranslation:function(desId){
             for (var prop in cc.director.NoticeText) {
                 if(prop.toString() == desId)

@@ -230,7 +230,6 @@ var AdsMgr = cc.Class({
 	                }
 	            });
 	            this.bannerAdCtrl.onResize(res=>{
-	    
 	                console.log("重置广告宽度 " + WXAD.H + " , " + self.bannerAdCtrl.style.realHeight);
 	                self.bannerAdCtrl.style.top = WXAD.H-self.bannerAdCtrl.style.realHeight;
 	                self.bannerAdCtrl.style.left = (WXAD.W-self.bannerAdCtrl.style.realWidth)/2;
@@ -336,11 +335,11 @@ var AdsMgr = cc.Class({
 	        {
 	            let videoAd = wx.createRewardedVideoAd({
 	                adUnitId: this.getVideoAdId(adName)
-	            })
+	            });
 	            
 	            videoAd.load()
 	            .then(() => videoAd.show())
-	            .catch(err => console.log(err.errMsg))
+	            .catch(err => console.log(err.errMsg));
 
 	            videoAd.onError(err => { 
 	                console.log("广告加载出错 " + err.errMsg) 
@@ -366,11 +365,11 @@ var AdsMgr = cc.Class({
 	            let videoAd = swan.createRewardedVideoAd({
 	                adUnitId: this.getVideoAdId(adName),
 	                appSid: 'ad8b61de'
-	            })
+	            });
 	            
 	            videoAd.load()
 	            .then(() => videoAd.show())
-	            .catch(err => console.log(err.errMsg))
+	            .catch(err => console.log(err.errMsg));
 
 	            videoAd.onError(err => { 
 	                console.log("广告加载出错 " + err.errMsg) 
@@ -380,7 +379,6 @@ var AdsMgr = cc.Class({
 	            videoAd.onLoad(()=>{ console.log("加载事件回调") });
 
 	            videoAd.onClose(res =>{
-
 	                console.log("是否观看完整了 " + res.isEnded) 
 	                this.cb(res.isEnded?0:1);
 	                videoAd.offLoad();
@@ -395,11 +393,11 @@ var AdsMgr = cc.Class({
 	            let videoAd = tt.createRewardedVideoAd({
 	                adUnitId: this.getVideoAdId(adName),
 	                //appSid: 'ad8b61de'
-	            })
+	            });
 	            
 	            videoAd.load()
 	            .then(() => videoAd.show())
-	            .catch(err => console.log(err.errMsg))
+	            .catch(err => console.log(err.errMsg));
 
 	            videoAd.onError(err => { 
 	                console.log("广告加载出错 " + err.errMsg) 

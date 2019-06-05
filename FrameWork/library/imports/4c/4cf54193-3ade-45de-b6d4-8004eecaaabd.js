@@ -5,7 +5,7 @@ cc._RF.push(module, '4cf54GTOt5F3rbUgATuyqq9', 'MapDataMgr');
 "use strict";
 
 var GoodMapDecoder = require("GoodMapDecoder");
-
+var DataType = require("DataType");
 var MapDataMgr = cc.Class({
     extends: cc.Component,
 

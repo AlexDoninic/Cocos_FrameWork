@@ -6,7 +6,7 @@ cc._RF.push(module, '294db5kmhVNM6K0TAEwEyUS', 'AppStart');
 
 //是否完成过管理工具的初始化
 cc.director.initMgr = false;
-
+//初始化管理类
 function initMgr() {
     cc.Mgr = {};
     cc.Mgr.Parse = false;
@@ -24,7 +24,6 @@ function initMgr() {
     cc.Mgr.AdsMgr = require("AdsMgr");
     cc.Mgr.AdsMgr.Init();
 
-    //声音
     var AudioMgr = require("AudioMgr");
     cc.Mgr.AudioMgr = new AudioMgr();
     cc.Mgr.AudioMgr.init();
@@ -52,7 +51,6 @@ cc.Class({
     start: function start() {
         //首先监听右上角的按钮
         cc.Mgr.PlatformController.ShareTopNav();
-
         cc.Mgr.PlatformController.ShowClubButton(true);
     },
     update: function update(dt) {}

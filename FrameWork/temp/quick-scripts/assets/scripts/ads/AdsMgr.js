@@ -211,7 +211,6 @@ var AdsMgr = cc.Class({
 					}
 				});
 				this.bannerAdCtrl.onResize(function (res) {
-
 					console.log("重置广告宽度 " + WXAD.H + " , " + self.bannerAdCtrl.style.realHeight);
 					self.bannerAdCtrl.style.top = WXAD.H - self.bannerAdCtrl.style.realHeight;
 					self.bannerAdCtrl.style.left = (WXAD.W - self.bannerAdCtrl.style.realWidth) / 2;
@@ -358,7 +357,6 @@ var AdsMgr = cc.Class({
 				});
 
 				_videoAd.onClose(function (res) {
-
 					console.log("是否观看完整了 " + res.isEnded);
 					_this.cb(res.isEnded ? 0 : 1);
 					_videoAd.offLoad();

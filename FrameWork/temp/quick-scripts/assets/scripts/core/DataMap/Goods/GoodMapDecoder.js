@@ -18,7 +18,6 @@ var GoodMapDecoder = cc.Class({
 
     //解析数据
     DecodeJson: function DecodeJson(event) {
-        //cc.log("===解析物品数据===");
         var self = this;
         self.reCb = event;
         cc.loader.loadRes("json/" + self.jsonName, function (error, obj) {

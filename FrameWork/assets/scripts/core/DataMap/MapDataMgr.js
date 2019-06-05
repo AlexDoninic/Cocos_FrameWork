@@ -1,5 +1,5 @@
 var GoodMapDecoder = require("GoodMapDecoder");
-
+var DataType = require("DataType");
 var MapDataMgr = cc.Class({
     extends: cc.Component,
 

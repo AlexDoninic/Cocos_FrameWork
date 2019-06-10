@@ -12,9 +12,14 @@ function initMgr(){
     cc.Mgr.Config = require("Config");
     cc.Mgr.ShareInfos = require("ShareInfos");
     cc.Mgr.ShareInfos.init();
+
+    cc.Mgr.Http = require("HttpMgr");
+    cc.Mgr.NetMgr = require("NetMgr");
+
+    //平台控制管理类
     cc.Mgr.PlatformController = require("PlatformController");
     cc.Mgr.PlatformController.Init();
-
+    //广告
     cc.Mgr.AdsMgr = require("AdsMgr");
     cc.Mgr.AdsMgr.Init();
 

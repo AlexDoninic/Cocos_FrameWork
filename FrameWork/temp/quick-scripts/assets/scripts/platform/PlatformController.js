@@ -4,8 +4,12 @@ cc._RF.push(module, '12160G6IAlDbZD1iSVVgN8Q', 'PlatformController', __filename)
 
 "use strict";
 
+var _statics;
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 var PlatformController = cc.Class({
-	statics: {
+	statics: (_statics = {
 		//微信 wx
 		//头条 tt
 		//百度 baidu
@@ -143,6 +147,16 @@ var PlatformController = cc.Class({
 			}
 		},
 
+		//客服入口
+		OpenServiceConversation: function OpenServiceConversation() {
+			if (this.platform == "wx") {
+				wx.openCustomerServiceConversation({
+					sessionFrom: '',
+					showMessageCard: true
+				});
+			} else if (this.platform == "tt") {}
+		},
+
 		//右上角的转发按钮
 		ShareTopNav: function ShareTopNav() {
 			var index = Math.floor(Math.random() * 8);
@@ -242,330 +256,309 @@ var PlatformController = cc.Class({
 					duration: 2000
 				});
 			}
-		},
+		}
 
-		//打开客服对话
-		OpenServiceConversation: function OpenServiceConversation() {
-			if (this.platform == "wx") {
-				wx.openCustomerServiceConversation({
-					sessionFrom: '',
-					showMessageCard: true
-				});
-			} else if (this.platform == "baidu") {
-				swan.openCustomerServiceConversation({});
+	}, _defineProperty(_statics, "OpenServiceConversation", function OpenServiceConversation() {
+		if (this.platform == "wx") {
+			wx.openCustomerServiceConversation({
+				sessionFrom: '',
+				showMessageCard: true
+			});
+		} else if (this.platform == "baidu") {
+			swan.openCustomerServiceConversation({});
+		}
+	}), _defineProperty(_statics, "setUserCloudStorage", function setUserCloudStorage(socre) {
+		cc.log("setUserCloudStorage socre = " + socre);
+		if (this.platform == "wx") {
+			var kvData = {};
+			kvData.wxgame = {};
+			kvData.wxgame.score = socre;
+			kvData.wxgame.update_time = new Date().getTime();
+			console.log(JSON.stringify(kvData));
+
+			var kvDataList = new Array();
+			kvDataList.push({ key: "xmbScore", value: JSON.stringify(kvData) });
+			wx.setUserCloudStorage({
+				KVDataList: kvDataList,
+				success: function success(res) {
+					console.log("success:" + JSON.stringify(res));
+				},
+				fail: function fail(res) {
+					console.log("fail : " + res);
+				}
+			});
+		} else if (this.platform == "baidu") {
+			var kvData = {};
+			kvData.wxgame = {};
+			kvData.wxgame.score = socre;
+			kvData.wxgame.update_time = new Date().getTime();
+			console.log(JSON.stringify(kvData));
+
+			var kvDataList = new Array();
+			kvDataList.push({ key: "xmbScore", value: JSON.stringify(kvData) });
+
+			swan.setUserCloudStorage({
+				KVDataList: kvDataList,
+				success: function success(res) {
+					return console.log("success " + res);
+				},
+				fail: function fail(res) {
+					return console.log("fail " + res);
+				},
+				complete: function complete(res) {
+					return console.log("complete " + res);
+				}
+			});
+		}
+	}), _defineProperty(_statics, "IsSupportRank", function IsSupportRank() {
+		if (this.platform == "wx" || this.platform == "baidu") return true;
+
+		return false;
+	}), _defineProperty(_statics, "showSubContentView", function showSubContentView() {
+		if (this.platform == "wx" || this.platform == "baidu") {
+			var param = {};
+			param.platform = this.platform;
+			param.flag = true;
+			cc.director.GlobalEvent.emit(cc.Mgr.Event.ShowRank, param);
+		}
+	}), _defineProperty(_statics, "hideSubContentView", function hideSubContentView() {
+		if (this.platform == "wx" || this.platform == "baidu") {
+			var param = {};
+			param.flag = false;
+			param.platform = this.platform;
+			cc.director.GlobalEvent.emit(cc.Mgr.Event.ShowRank, param);
+		}
+	}), _defineProperty(_statics, "SendMessageToSubView", function SendMessageToSubView(code) {
+		var curScore = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
+
+		var msg = {};
+		msg.code = code;
+		msg.curScore = curScore;
+		if (this.platform == "wx") {
+			wx.getOpenDataContext().postMessage({
+				message: msg
+			});
+		} else if (this.platform == "baidu") {
+			swan.getOpenDataContext().postMessage({
+				message: msg
+			});
+		}
+	}), _defineProperty(_statics, "IsSupportRecordScreen", function IsSupportRecordScreen() {
+		if (this.platform == "tt") return true;else if (this.platform == "baidu") //百度有基础库版本限制
+			{
+				if (this.CompareSdkVesrion(swan.getSystemInfoSync().SDKVersion, "1.4.1")) return true;else return false;
 			}
-		},
 
-		//微信开放数据存储 score 代表当前要保存的东西
-		setUserCloudStorage: function setUserCloudStorage(socre) {
-			cc.log("setUserCloudStorage socre = " + socre);
-			if (this.platform == "wx") {
-				var kvData = {};
-				kvData.wxgame = {};
-				kvData.wxgame.score = socre;
-				kvData.wxgame.update_time = new Date().getTime();
-				console.log(JSON.stringify(kvData));
+		return false;
+	}), _defineProperty(_statics, "CompareSdkVesrion", function CompareSdkVesrion(sdkV, needV) {
+		var out1 = sdkV.split('.');
+		var out2 = needV.split('.');
+		for (var i = 0; i < out1.length; i++) {
+			if (parseInt(out1[i]) < parseInt(out2[i])) {
+				return 0;
+			} else if (parseInt(out1[i]) > parseInt(out2[i])) {
+				return 1;
+			}
+		}
+		return 1;
+	}), _defineProperty(_statics, "StartRecordScreen", function StartRecordScreen() {
+		var self = this;
+		this.videoPath = "";
+		if (this.platform == "tt") {
+			if (this.recorderManager == null) {
+				this.recorderManager = tt.getGameRecorderManager();
 
-				var kvDataList = new Array();
-				kvDataList.push({ key: "xmbScore", value: JSON.stringify(kvData) });
-				wx.setUserCloudStorage({
-					KVDataList: kvDataList,
-					success: function success(res) {
-						console.log("success:" + JSON.stringify(res));
-					},
-					fail: function fail(res) {
-						console.log("fail : " + res);
-					}
+				this.recorderManager.onStart(function (res) {
+					console.log("录制开始了: " + res);
 				});
-			} else if (this.platform == "baidu") {
-				var kvData = {};
-				kvData.wxgame = {};
-				kvData.wxgame.score = socre;
-				kvData.wxgame.update_time = new Date().getTime();
-				console.log(JSON.stringify(kvData));
 
-				var kvDataList = new Array();
-				kvDataList.push({ key: "xmbScore", value: JSON.stringify(kvData) });
+				this.recorderManager.onStop(function (res) {
+					console.log("录制结束了: " + res.videoPath);
+					self.videoPath = res.videoPath;
+					self.ShareRecordScreen();
+				});
 
-				swan.setUserCloudStorage({
-					KVDataList: kvDataList,
-					success: function success(res) {
-						return console.log("success " + res);
-					},
-					fail: function fail(res) {
-						return console.log("fail " + res);
-					},
-					complete: function complete(res) {
-						return console.log("complete " + res);
-					}
+				this.recorderManager.onPause(function () {
+					console.log("录制暂停了");
+				});
+
+				this.recorderManager.onResume(function () {
+					console.log("录制恢复了");
+				});
+
+				this.recorderManager.onError(function (errMsg) {
+					console.log("录制出错了:" + errMsg);
 				});
 			}
-		},
 
-		//是否支持排行功能
-		IsSupportRank: function IsSupportRank() {
-			if (this.platform == "wx" || this.platform == "baidu") return true;
+			this.recorderManager.start({
+				duration: 30 //基础录制30秒
+			});
+		} else if (this.platform == "baidu") {
+			if (this.recorderManager == null) {
+				this.recorderManager = swan.getVideoRecorderManager();
 
-			return false;
-		},
-
-		//显示子域
-		showSubContentView: function showSubContentView() {
-			if (this.platform == "wx" || this.platform == "baidu") {
-				var param = {};
-				param.platform = this.platform;
-				param.flag = true;
-				cc.director.GlobalEvent.emit(cc.Mgr.Event.ShowRank, param);
-			}
-		},
-
-		//隐藏子域
-		hideSubContentView: function hideSubContentView() {
-			if (this.platform == "wx" || this.platform == "baidu") {
-				var param = {};
-				param.flag = false;
-				param.platform = this.platform;
-				cc.director.GlobalEvent.emit(cc.Mgr.Event.ShowRank, param);
-			}
-		},
-
-		//向子域发送信息
-		SendMessageToSubView: function SendMessageToSubView(code) {
-			var curScore = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
-
-			var msg = {};
-			msg.code = code;
-			msg.curScore = curScore;
-			if (this.platform == "wx") {
-				wx.getOpenDataContext().postMessage({
-					message: msg
+				this.recorderManager.onStart(function (res) {
+					console.log("录制开始了: " + res);
 				});
-			} else if (this.platform == "baidu") {
-				swan.getOpenDataContext().postMessage({
-					message: msg
+
+				this.recorderManager.onStop(function (res) {
+					console.log("录制结束了: " + res.videoPath);
+					self.videoPath = res.videoPath;
+				});
+
+				this.recorderManager.onPause(function () {
+					console.log("录制暂停了");
+				});
+
+				this.recorderManager.onResume(function () {
+					console.log("录制恢复了");
+				});
+
+				this.recorderManager.onError(function (errMsg) {
+					console.log("录制出错了:" + errMsg);
 				});
 			}
-		},
+			this.recorderManager.start({
+				duration: 30,
+				microphoneEnabled: true //是否支持麦克风
+			});
+		}
+	}), _defineProperty(_statics, "StopRecordScreen", function StopRecordScreen() {
+		if (this.platform == "tt") {
+			if (this.recorderManager == null) {
+				return;
+			}
+			console.log("停止录制");
+			this.recorderManager.stop();
+		} else if (this.platform == "baidu") {
+			if (this.recorderManager == null) {
+				return;
+			}
+			console.log("停止录制");
+			this.recorderManager.stop();
+		}
+	}), _defineProperty(_statics, "ShareRecordScreen", function ShareRecordScreen() {
+		if (this.platform == "tt") {
+			if (this.recorderManager == null || this.videoPath == "") {
+				return;
+			}
+			console.log("分享录制的视频");
+			tt.shareVideo({
+				videoPath: "" + this.videoPath,
+				success: function success() {
+					console.log("分享成功！");
+				},
+				fail: function fail(e) {
+					console.log("分享失败！" + e);
+				}
+			});
+		} else if (this.platform == "baidu") {
+			if (this.recorderManager == null || this.videoPath == null) {
+				return;
+			}
 
-		//是否支持录屏
-		IsSupportRecordScreen: function IsSupportRecordScreen() {
-			if (this.platform == "tt") return true;else if (this.platform == "baidu") return true;
+			console.log("分享录制的视频");
+			swan.shareVideo({
+				videoPath: "" + this.videoPath,
+				success: function success() {
+					console.log("分享成功！");
+				},
+				fail: function fail(e) {
+					console.log("分享失败！" + e);
+				}
+			});
+		}
+	}), _defineProperty(_statics, "JumpToOtherApp", function JumpToOtherApp(appId) {
+		if (this.platform == "wx") {
+			wx.navigateToMiniProgram({
+				appId: appId,
+				envVersion: 'release',
+				success: function success(res) {
+					console.log("成功打开了其他小程序");
+				}
+			});
+		} else if (this.platform == "baidu") {
+			swan.navigateToMiniProgram({
+				appKey: appId,
+				success: function success(res) {
+					console.log("成功打开了其他小程序");
+				}
+			});
+		} else if (this.platform == "tt") {
+			tt.navigateToMiniProgram({
+				appId: appId,
+				envVersion: 'release',
+				success: function success(res) {
+					console.log("成功打开了其他小程序");
+				}
+			});
+		}
+	}), _defineProperty(_statics, "QuakeScreen", function QuakeScreen() {
+		var long = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : true;
 
-			return false;
-		},
-
-		//开始录屏
-		StartRecordScreen: function StartRecordScreen() {
-			var _this = this;
-
-			var self = this;
-			this.videoPath = "";
-			if (this.platform == "tt") {
-				if (this.recorderManager == null) {
-					this.recorderManager = tt.getGameRecorderManager();
-
-					this.recorderManager.onStart(function (res) {
-						console.log("录制开始了: " + res);
+		if (this.platform != "pc") {
+			if (long == true) {
+				if (this.platform == "tt") {
+					tt.vibrateLong({
+						success: function success(res) {
+							console.log("" + res);
+						},
+						fail: function fail(res) {
+							console.log("vibrateLong\u8C03\u7528\u5931\u8D25");
+						}
 					});
-
-					this.recorderManager.onStop(function (res) {
-						console.log("录制结束了: " + res.videoPath);
-						self.videoPath = res.videoPath;
-						_this.onRecordStop();
+				} else if (this.platform == "baidu") {
+					swan.vibrateLong({
+						success: function success(res) {
+							console.log("" + res);
+						},
+						fail: function fail(res) {
+							console.log("vibrateLong\u8C03\u7528\u5931\u8D25");
+						}
 					});
-
-					this.recorderManager.onPause(function () {
-						console.log("录制暂停了");
-					});
-
-					this.recorderManager.onResume(function () {
-						console.log("录制恢复了");
-					});
-
-					this.recorderManager.onError(function (errMsg) {
-						console.log("录制出错了:" + errMsg);
+				} else if (this.platform == "wx") {
+					wx.vibrateLong({
+						success: function success(res) {
+							console.log("" + res);
+						},
+						fail: function fail(res) {
+							console.log("vibrateLong\u8C03\u7528\u5931\u8D25");
+						}
 					});
 				}
-
-				this.recorderManager.start({
-					duration: 30 //基础录制30秒
-				});
-			} else if (this.platform == "baidu") {
-				if (this.recorderManager == null) {
-					this.recorderManager = swan.getVideoRecorderManager();
-
-					this.recorderManager.onStart(function (res) {
-						console.log("录制开始了: " + res);
+			} else {
+				if (this.platform == "tt") {
+					tt.vibrateShort({
+						success: function success(res) {
+							console.log("" + res);
+						},
+						fail: function fail(res) {
+							console.log("vibrateShort\u8C03\u7528\u5931\u8D25");
+						}
 					});
-
-					this.recorderManager.onStop(function (res) {
-						console.log("录制结束了: " + res.videoPath);
-						self.videoPath = res.videoPath;
+				} else if (this.platform == "baidu") {
+					swan.vibrateShort({
+						success: function success(res) {
+							console.log("" + res);
+						},
+						fail: function fail(res) {
+							console.log("vibrateShort\u8C03\u7528\u5931\u8D25");
+						}
 					});
-
-					this.recorderManager.onPause(function () {
-						console.log("录制暂停了");
+				} else if (this.platform == "wx") {
+					wx.vibrateShort({
+						success: function success(res) {
+							console.log("" + res);
+						},
+						fail: function fail(res) {
+							console.log("vibrateLong\u8C03\u7528\u5931\u8D25");
+						}
 					});
-
-					this.recorderManager.onResume(function () {
-						console.log("录制恢复了");
-					});
-
-					this.recorderManager.onError(function (errMsg) {
-						console.log("录制出错了:" + errMsg);
-					});
-				}
-				this.recorderManager.start({
-					duration: 30,
-					microphoneEnabled: true //是否支持麦克风
-				});
-			}
-		},
-		//停止录屏
-		StopRecordScreen: function StopRecordScreen() {
-			if (this.platform == "tt") {
-				if (this.recorderManager == null) {
-					return;
-				}
-				console.log("停止录制");
-				this.recorderManager.stop();
-			} else if (this.platform == "baidu") {
-				if (this.recorderManager == null) {
-					return;
-				}
-				console.log("停止录制");
-				this.recorderManager.stop();
-			}
-		},
-		//分享录制的视频
-		ShareRecordScreen: function ShareRecordScreen() {
-			if (this.platform == "tt") {
-				if (this.recorderManager == null || this.videoPath == "") {
-					return;
-				}
-				console.log("分享录制的视频");
-				tt.shareVideo({
-					videoPath: "" + this.videoPath,
-					success: function success() {
-						console.log("分享成功！");
-					},
-					fail: function fail(e) {
-						console.log("分享失败！" + e);
-					}
-				});
-			} else if (this.platform == "baidu") {
-				if (this.recorderManager == null || this.videoPath == null) {
-					return;
-				}
-
-				console.log("分享录制的视频");
-				swan.shareVideo({
-					videoPath: "" + this.videoPath,
-					success: function success() {
-						console.log("分享成功！");
-					},
-					fail: function fail(e) {
-						console.log("分享失败！" + e);
-					}
-				});
-			}
-		},
-
-		//跳转到其他小程序  要到对应 app.json 或者 game.json 中添加列表
-		JumpToOtherApp: function JumpToOtherApp(appId) {
-			if (this.platform == "wx") {
-				wx.navigateToMiniProgram({
-					appId: appId,
-					envVersion: 'release',
-					success: function success(res) {
-						console.log("成功打开了其他小程序");
-					}
-				});
-			} else if (this.platform == "baidu") {
-				swan.navigateToMiniProgram({
-					appKey: appId,
-					success: function success(res) {
-						console.log("成功打开了其他小程序");
-					}
-				});
-			} else if (this.platform == "tt") {
-				tt.navigateToMiniProgram({
-					appId: appId,
-					envVersion: 'release',
-					success: function success(res) {
-						console.log("成功打开了其他小程序");
-					}
-				});
-			}
-		},
-
-		//震屏功能  长震动还是短震动
-		QuakeScreen: function QuakeScreen() {
-			var long = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : true;
-
-			if (this.platform != "pc") {
-				if (long == true) {
-					if (this.platform == "tt") {
-						tt.vibrateLong({
-							success: function success(res) {
-								console.log("" + res);
-							},
-							fail: function fail(res) {
-								console.log("vibrateLong\u8C03\u7528\u5931\u8D25");
-							}
-						});
-					} else if (this.platform == "baidu") {
-						swan.vibrateLong({
-							success: function success(res) {
-								console.log("" + res);
-							},
-							fail: function fail(res) {
-								console.log("vibrateLong\u8C03\u7528\u5931\u8D25");
-							}
-						});
-					} else if (this.platform == "wx") {
-						wx.vibrateLong({
-							success: function success(res) {
-								console.log("" + res);
-							},
-							fail: function fail(res) {
-								console.log("vibrateLong\u8C03\u7528\u5931\u8D25");
-							}
-						});
-					}
-				} else {
-					if (this.platform == "tt") {
-						tt.vibrateShort({
-							success: function success(res) {
-								console.log("" + res);
-							},
-							fail: function fail(res) {
-								console.log("vibrateShort\u8C03\u7528\u5931\u8D25");
-							}
-						});
-					} else if (this.platform == "baidu") {
-						swan.vibrateShort({
-							success: function success(res) {
-								console.log("" + res);
-							},
-							fail: function fail(res) {
-								console.log("vibrateShort\u8C03\u7528\u5931\u8D25");
-							}
-						});
-					} else if (this.platform == "wx") {
-						wx.vibrateShort({
-							success: function success(res) {
-								console.log("" + res);
-							},
-							fail: function fail(res) {
-								console.log("vibrateLong\u8C03\u7528\u5931\u8D25");
-							}
-						});
-					}
 				}
 			}
 		}
-	}
+	}), _statics)
 });
 module.exports = PlatformController;
 

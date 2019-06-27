@@ -1,79 +1,120 @@
-2019-06-10T02:17:44.526Z - normal: Load ~/.CocosCreator/settings.json
-2019-06-10T02:17:45.644Z - normal: Initializing Asset Database
-2019-06-10T02:17:45.646Z - normal: checking language setting...
-2019-06-10T02:17:45.646Z - normal: Language: zh
-2019-06-10T02:17:46.140Z - success: preview server running at http://localhost:7456
-2019-06-10T02:17:46.142Z - success: protocol editor-framework registered
-2019-06-10T02:17:46.142Z - success: protocol app registered
-2019-06-10T02:17:46.142Z - success: protocol theme registered
-2019-06-10T02:17:46.142Z - success: protocol packages registered
-2019-06-10T02:17:46.142Z - success: protocol uuid registerred
-2019-06-10T02:17:46.142Z - success: protocol db registerred
-2019-06-10T02:17:46.142Z - success: protocol thumbnail registerred
-2019-06-10T02:17:46.142Z - success: protocol unpack registerred
-2019-06-10T02:17:46.143Z - success: protocol disable-commonjs registerred
-2019-06-10T02:17:46.400Z - normal: connected!
-2019-06-10T02:17:46.400Z - normal: Check project E:\workspace\Cocos_FrameWork\FrameWork
-2019-06-10T02:17:46.400Z - normal: Initializing project E:\workspace\Cocos_FrameWork\FrameWork
-2019-06-10T02:17:46.696Z - normal: Initializing Cocos2d
-2019-06-10T02:17:47.335Z - normal: Initializing engine extends
-2019-06-10T02:17:47.335Z - success: asset-db-debugger loaded
-2019-06-10T02:17:47.351Z - success: baidu-adapter loaded
-2019-06-10T02:17:47.351Z - success: color-picker loaded
-2019-06-10T02:17:47.413Z - success: fb-audience-network loaded
-2019-06-10T02:17:47.444Z - success: fb-live-stream loaded
-2019-06-10T02:17:47.444Z - success: google-play-instant loaded
-2019-06-10T02:17:47.460Z - success: huawei-runtime loaded
-2019-06-10T02:17:47.639Z - success: cpk-publish loaded
-2019-06-10T02:17:47.640Z - success: jsb-adapter loaded
-2019-06-10T02:17:47.643Z - success: oppo-runtime loaded
-2019-06-10T02:17:47.645Z - success: package-manager loaded
-2019-06-10T02:17:47.726Z - success: qqplay-adapter loaded
-2019-06-10T02:17:47.727Z - success: runtime-dev-tools loaded
-2019-06-10T02:17:47.730Z - success: sdkbox loaded
-2019-06-10T02:17:47.732Z - success: tester loaded
-2019-06-10T02:17:47.738Z - success: ui-grid loaded
-2019-06-10T02:17:47.740Z - success: ui-kit-preview-extra loaded
-2019-06-10T02:17:47.741Z - success: ui-kit-preview loaded
-2019-06-10T02:17:47.742Z - success: ui-kit loaded
-2019-06-10T02:17:47.744Z - success: ui-tree loaded
-2019-06-10T02:17:47.748Z - success: vivo-runtime loaded
-2019-06-10T02:17:47.748Z - success: weapp-adapter loaded
-2019-06-10T02:17:47.748Z - success: xiaomi-adapter loaded
-2019-06-10T02:17:47.786Z - success: assets loaded
-2019-06-10T02:17:47.788Z - success: builder loaded
-2019-06-10T02:17:47.990Z - success: cocos-services loaded
-2019-06-10T02:17:47.993Z - success: console loaded
-2019-06-10T02:17:48.020Z - success: fb-instant-games loaded
-2019-06-10T02:17:48.021Z - success: google-instant-games loaded
-2019-06-10T02:17:48.024Z - success: hierarchy loaded
-2019-06-10T02:17:48.026Z - success: inspector loaded
-2019-06-10T02:17:48.027Z - success: keystore loaded
-2019-06-10T02:17:48.030Z - success: node-library loaded
-2019-06-10T02:17:48.031Z - success: package-asset loaded
-2019-06-10T02:17:48.032Z - success: preferences loaded
-2019-06-10T02:17:48.033Z - success: project-exporter loaded
-2019-06-10T02:17:48.034Z - success: project-importer loaded
-2019-06-10T02:17:48.035Z - success: project-settings loaded
-2019-06-10T02:17:48.038Z - success: scene loaded
-2019-06-10T02:17:48.039Z - success: simulator-debugger loaded
-2019-06-10T02:17:48.040Z - success: sprite-editor loaded
-2019-06-10T02:17:48.042Z - success: store loaded
-2019-06-10T02:17:48.045Z - success: timeline loaded
-2019-06-10T02:17:48.049Z - success: xiaomi-runtime loaded
-2019-06-10T02:17:48.916Z - normal: Loading packages
-2019-06-10T02:17:48.920Z - normal: Watching packages
-2019-06-10T02:17:49.277Z - normal: Run Application
-2019-06-10T02:17:49.787Z - info: Cocos Services load base data!
-2019-06-10T02:17:54.898Z - failed: load script [socket-io] failed : Error: Cannot find module 'socket-io'
-    at Module._resolveFilename (module.js:470:15)
-    at Function.Module._resolveFilename [as _resolveFilenameVendor] (D:\CocosCreator\resources\electron.asar\common\reset-search-paths.js:35:12)
-    at Function.s._resolveFilename (D:\CocosCreator\resources\app.asar\editor\page\project-scripts.js:1:941)
-    at Function.Module._load (module.js:418:25)
-    at Module.require (module.js:498:17)
-    at require (internal/module.js:20:19)
-    at Object.cc.require (D:\CocosCreator\resources\app.asar\editor\page\project-scripts.js:1:589)
-    at E:\workspace\Cocos_FrameWork\FrameWork\temp\quick-scripts\assets\scripts\core\NetMgr.js:1:354
-    at __define (E:\workspace\Cocos_FrameWork\FrameWork\temp\quick-scripts\assets\scripts\core\NetMgr.js:12:17)
-    at E:\workspace\Cocos_FrameWork\FrameWork\temp\quick-scripts\assets\scripts\core\NetMgr.js:148:13
-2019-06-10T03:15:09.517Z - info: shutdown preview server
+2019-06-27T03:25:49.160Z - normal: Load ~/.CocosCreator/settings.json
+2019-06-27T03:25:50.255Z - normal: Initializing Asset Database
+2019-06-27T03:25:50.258Z - normal: checking language setting...
+2019-06-27T03:25:50.258Z - normal: Language: zh
+2019-06-27T03:25:50.784Z - success: preview server running at http://localhost:7456
+2019-06-27T03:25:50.786Z - success: protocol editor-framework registered
+2019-06-27T03:25:50.786Z - success: protocol app registered
+2019-06-27T03:25:50.786Z - success: protocol theme registered
+2019-06-27T03:25:50.786Z - success: protocol packages registered
+2019-06-27T03:25:50.786Z - success: protocol uuid registerred
+2019-06-27T03:25:50.786Z - success: protocol db registerred
+2019-06-27T03:25:50.786Z - success: protocol thumbnail registerred
+2019-06-27T03:25:50.786Z - success: protocol unpack registerred
+2019-06-27T03:25:50.786Z - success: protocol disable-commonjs registerred
+2019-06-27T03:25:51.033Z - normal: connected!
+2019-06-27T03:25:51.036Z - normal: Check project E:\workspace\Cocos_FrameWork\FrameWork
+2019-06-27T03:25:51.041Z - normal: Initializing project E:\workspace\Cocos_FrameWork\FrameWork
+2019-06-27T03:25:51.363Z - normal: Initializing Cocos2d
+2019-06-27T03:25:51.980Z - normal: Initializing engine extends
+2019-06-27T03:25:51.994Z - success: asset-db-debugger loaded
+2019-06-27T03:25:51.995Z - success: baidu-adapter loaded
+2019-06-27T03:25:51.996Z - success: color-picker loaded
+2019-06-27T03:25:52.064Z - success: fb-audience-network loaded
+2019-06-27T03:25:52.105Z - success: fb-live-stream loaded
+2019-06-27T03:25:52.108Z - success: google-play-instant loaded
+2019-06-27T03:25:52.112Z - success: huawei-runtime loaded
+2019-06-27T03:25:52.298Z - success: cpk-publish loaded
+2019-06-27T03:25:52.298Z - success: jsb-adapter loaded
+2019-06-27T03:25:52.302Z - success: oppo-runtime loaded
+2019-06-27T03:25:52.304Z - success: package-manager loaded
+2019-06-27T03:25:52.392Z - success: qqplay-adapter loaded
+2019-06-27T03:25:52.393Z - success: runtime-dev-tools loaded
+2019-06-27T03:25:52.396Z - success: sdkbox loaded
+2019-06-27T03:25:52.398Z - success: tester loaded
+2019-06-27T03:25:52.400Z - success: ui-grid loaded
+2019-06-27T03:25:52.401Z - success: ui-kit-preview-extra loaded
+2019-06-27T03:25:52.402Z - success: ui-kit-preview loaded
+2019-06-27T03:25:52.404Z - success: ui-kit loaded
+2019-06-27T03:25:52.405Z - success: ui-tree loaded
+2019-06-27T03:25:52.413Z - success: vivo-runtime loaded
+2019-06-27T03:25:52.414Z - success: weapp-adapter loaded
+2019-06-27T03:25:52.415Z - success: xiaomi-adapter loaded
+2019-06-27T03:25:52.452Z - success: assets loaded
+2019-06-27T03:25:52.454Z - success: builder loaded
+2019-06-27T03:25:52.657Z - success: cocos-services loaded
+2019-06-27T03:25:52.660Z - success: console loaded
+2019-06-27T03:25:52.688Z - success: fb-instant-games loaded
+2019-06-27T03:25:52.689Z - success: google-instant-games loaded
+2019-06-27T03:25:52.692Z - success: hierarchy loaded
+2019-06-27T03:25:52.694Z - success: inspector loaded
+2019-06-27T03:25:52.695Z - success: keystore loaded
+2019-06-27T03:25:52.698Z - success: node-library loaded
+2019-06-27T03:25:52.699Z - success: package-asset loaded
+2019-06-27T03:25:52.700Z - success: preferences loaded
+2019-06-27T03:25:52.701Z - success: project-exporter loaded
+2019-06-27T03:25:52.703Z - success: project-importer loaded
+2019-06-27T03:25:52.704Z - success: project-settings loaded
+2019-06-27T03:25:52.707Z - success: scene loaded
+2019-06-27T03:25:52.708Z - success: simulator-debugger loaded
+2019-06-27T03:25:52.708Z - success: sprite-editor loaded
+2019-06-27T03:25:52.711Z - success: store loaded
+2019-06-27T03:25:52.713Z - success: timeline loaded
+2019-06-27T03:25:52.717Z - success: xiaomi-runtime loaded
+2019-06-27T03:25:53.838Z - normal: Loading packages
+2019-06-27T03:25:53.844Z - normal: Watching packages
+2019-06-27T03:25:54.218Z - normal: Run Application
+2019-06-27T03:25:54.507Z - info: Cocos Services load base data!
+2019-06-27T03:26:07.667Z - normal: Simulator: SCREEN DPI = 96, SCREEN SCALE = 1.00
+2019-06-27T03:26:07.670Z - normal: Simulator: WORKAREA WIDTH 1912.00, HEIGHT 989.00
+2019-06-27T03:26:07.671Z - normal: Simulator: FRAME SCALE = 0.50
+2019-06-27T03:26:07.727Z - normal: Simulator: Ready for GLSL
+2019-06-27T03:26:07.727Z - normal: Simulator: Ready for OpenGL 2.0
+2019-06-27T03:26:07.732Z - normal: Simulator: Project Config:
+2019-06-27T03:26:07.732Z - normal: Simulator:     project dir: D:\CocosCreator\resources\cocos2d-x\simulator\win32\
+2019-06-27T03:26:07.733Z - normal: Simulator:     writable path: $(PROJDIR)\
+2019-06-27T03:26:07.733Z - normal: Simulator:     script file: $(PROJDIR)\main.js
+2019-06-27T03:26:07.733Z - normal: Simulator:     frame size: 750 x 1334
+2019-06-27T03:26:07.733Z - normal: Simulator:     frame scale: 0.50
+2019-06-27T03:26:07.733Z - normal: Simulator:     show console: NO
+2019-06-27T03:26:07.733Z - normal: Simulator:     write debug log: NO ()
+2019-06-27T03:26:07.734Z - normal: Simulator:     listen: 
+2019-06-27T03:26:07.734Z - normal: Simulator:     debugger: none
+2019-06-27T03:26:07.734Z - normal: Simulator:     add searching path:
+2019-06-27T03:26:07.734Z - normal: Simulator: 
+2019-06-27T03:26:07.734Z - normal: Simulator: 
+2019-06-27T03:26:07.734Z - normal: Simulator: 
+2019-06-27T03:26:07.735Z - normal: Simulator: resetDesignResolution request
+2019-06-27T03:26:07.735Z - normal: Simulator: ------------------------------------------------
+2019-06-27T03:26:07.735Z - normal: Simulator: LOAD Js FILE: jsb-adapter/jsb-builtin.js
+2019-06-27T03:26:07.735Z - normal: Simulator: ------------------------------------------------
+2019-06-27T03:26:07.735Z - normal: Simulator: D/jswrapper (368): Initializing V8, version: 6.0.286.52
+2019-06-27T03:26:08.028Z - normal: Simulator: D/jswrapper (813): libuv version: 1.13.1
+2019-06-27T03:26:08.054Z - normal: Simulator: D/jswrapper (112): Debugger listening..., visit [ chrome-devtools://devtools/bundled/inspector.html?v8only=true&ws=0.0.0.0:5086/00010002-0003-4004-8005-000600070008 ] in chrome browser to debug!
+2019-06-27T03:26:08.054Z - normal: Simulator: D/jswrapper (115): For help see https://nodejs.org/en/docs/inspector
+2019-06-27T03:26:08.090Z - normal: Simulator: D/jswrapper (129): JS: Enable batch GL commands optimization!
+2019-06-27T03:26:08.090Z - normal: Simulator: resetDesignResolution request
+2019-06-27T03:26:08.090Z - normal: Simulator: ------------------------------------------------
+2019-06-27T03:26:08.090Z - normal: Simulator: LOAD Js FILE: main.js
+2019-06-27T03:26:08.090Z - normal: Simulator: ------------------------------------------------
+2019-06-27T03:26:08.383Z - normal: Simulator: iShow!
+2019-06-27T03:26:08.409Z - normal: Simulator: D/jswrapper (4159): glGetIntegerv: pname: 0x8b4c
+2019-06-27T03:26:08.418Z - normal: Simulator: D/jswrapper (129): JS: Cocos Creator v2.0.10
+2019-06-27T03:26:08.573Z - normal: Simulator: D/jswrapper (129): JS: [WARN]: Since 1.10, `cc.audioEngine` accept cc.AudioClip instance directly, not a URL string. Please directly reference the AudioClip object in your script, or load cc.AudioClip by loader first. Don't use audio's URL anymore.
+2019-06-27T03:26:08.726Z - normal: Simulator: D/jswrapper (129): JS: 解析完成
+2019-06-27T03:26:14.812Z - normal: Simulator: D/jswrapper (452): ScriptEngine::cleanup begin ...
+2019-06-27T03:26:14.813Z - normal: Simulator: D/jswrapper (593): GC begin ..., (js->native map) size: 14, all objects: 90
+2019-06-27T03:26:14.857Z - normal: Simulator: D/jswrapper (601): GC end ..., (js->native map) size: 14, all objects: 90
+2019-06-27T03:26:14.858Z - normal: Simulator: D/jswrapper (593): GC begin ..., (js->native map) size: 14, all objects: 90
+2019-06-27T03:26:14.890Z - normal: Simulator: D/jswrapper (601): GC end ..., (js->native map) size: 14, all objects: 90
+2019-06-27T03:26:14.892Z - normal: Simulator: D/jswrapper (270): Destroy WebGLBuffer (3) by GC
+2019-06-27T03:26:14.907Z - normal: Simulator: D/jswrapper (270): Destroy WebGLBuffer (4) by GC
+2019-06-27T03:26:14.908Z - normal: Simulator: D/jswrapper (270): Destroy WebGLBuffer (1) by GC
+2019-06-27T03:26:14.908Z - normal: Simulator: D/jswrapper (270): Destroy WebGLBuffer (2) by GC
+2019-06-27T03:26:14.908Z - normal: Simulator: D/jswrapper (251): Destroy WebGLTexture (1) by GC
+2019-06-27T03:26:14.908Z - normal: Simulator: D/jswrapper (251): Destroy WebGLTexture (2) by GC
+2019-06-27T03:26:14.912Z - normal: Simulator: D/jswrapper (327): Destroy WebGLProgram (3) by GC
+2019-06-27T03:26:14.912Z - normal: Simulator: D/jswrapper (593): GC begin ..., (js->native map) size: 0, all objects: 0
+2019-06-27T03:26:14.944Z - normal: Simulator: D/jswrapper (601): GC end ..., (js->native map) size: 0, all objects: 0
+2019-06-27T03:26:14.978Z - normal: Simulator: D/jswrapper (515): ScriptEngine::cleanup end ...
+2019-06-27T03:26:18.451Z - info: shutdown preview server

@@ -57,9 +57,16 @@ cc.Class({
         //首先监听右上角的按钮
         cc.Mgr.PlatformController.ShareTopNav();
         cc.Mgr.PlatformController.ShowClubButton(true);
-    },
-    update: function update(dt) {}
-});
+    }
+}
+
+/*
+update(dt)
+{
+    
+},
+*/
+);
 
 cc._RF.pop();
         }

@@ -56,9 +56,10 @@ cc.Class({
         cc.Mgr.PlatformController.ShowClubButton(true);
     },
 
+    /*
     update(dt)
     {
         
     },
-
+    */
 });

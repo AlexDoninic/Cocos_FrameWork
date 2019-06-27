@@ -21,6 +21,9 @@ var AdsMgr = cc.Class({
 		bannerId_wx: "adunit-42bcaae6cafaa7c6",
 		bannerId_tt: "6152042",
 
+		//百度有个单独appSid
+		appSid_baidu: "c0fb407f",
+
 		//百度广告id  激励视频
 		bdVideoId_1: "6191756",
 		bdVideoId_2: "6191755",
@@ -57,6 +60,7 @@ var AdsMgr = cc.Class({
 		ttVideoId_10: "",
 
 		allScreen: false,
+		resizeTime: 0,
 
 		//首先确定使用的平台
 		Init: function Init() {
@@ -186,6 +190,7 @@ var AdsMgr = cc.Class({
 		//banner 广告
 		ShowBannerAds: function ShowBannerAds() {
 			var self = this;
+			this.resizeTime = 0;
 
 			if (this.bannerAdShowNum == null) this.bannerAdShowNum = 0;
 			this.bannerAdShowNum++;
@@ -235,7 +240,7 @@ var AdsMgr = cc.Class({
 					console.log("百度的 bannerId = " + this.getBannerAdId());
 					this.bannerAdCtrl = swan.createBannerAd({
 						adUnitId: this.getBannerAdId(),
-						appSid: 'c0fb407f',
+						appSid: this.appSid_baidu,
 						style: {
 							left: 0,
 							top: 0,
@@ -272,7 +277,6 @@ var AdsMgr = cc.Class({
 					console.log("头条 bannerId = " + this.getBannerAdId());
 					this.bannerAdCtrl = tt.createBannerAd({
 						adUnitId: this.getBannerAdId(),
-						//appSid:'c0fb407f',
 						style: {
 							left: 0,
 							top: 0,
@@ -283,10 +287,14 @@ var AdsMgr = cc.Class({
 					if (this.allScreen) self.bannerAdCtrl.style.width = _WXAD2.H;else self.bannerAdCtrl.style.width = 300;
 
 					this.bannerAdCtrl.onResize(function (res) {
-						console.log("重置广告宽度 ");
-						self.bannerAdCtrl.style.top = _WXAD2.H - res.height;
-						self.bannerAdCtrl.style.left = (_WXAD2.W - res.width) / 2;
-						self.bannerAdCtrl.show();
+						if (self.resizeTime <= 5) //防止头条的反复重置大小
+							{
+								console.log("重置广告宽度 ");
+								self.bannerAdCtrl.style.top = _WXAD2.H - res.height;
+								self.bannerAdCtrl.style.left = (_WXAD2.W - res.width) / 2;
+								self.bannerAdCtrl.show();
+								self.resizeTime += 1;
+							}
 					});
 
 					this.bannerAdCtrl.onLoad(function () {
@@ -305,6 +313,7 @@ var AdsMgr = cc.Class({
 		ShowVideoAds: function ShowVideoAds(adName, cb) {
 			var _this = this;
 
+			this.cb = null;
 			this.cb = cb;
 			if (this.platform == "wx") {
 				var videoAd = wx.createRewardedVideoAd({
@@ -338,7 +347,7 @@ var AdsMgr = cc.Class({
 
 				var _videoAd = swan.createRewardedVideoAd({
 					adUnitId: this.getVideoAdId(adName),
-					appSid: 'ad8b61de'
+					appSid: this.appSid_baidu
 				});
 
 				_videoAd.load().then(function () {

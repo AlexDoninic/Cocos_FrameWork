@@ -15,6 +15,9 @@ var AdsMgr = cc.Class({
         bannerId_wx:"adunit-42bcaae6cafaa7c6",
         bannerId_tt:"6152042",
 
+        //百度有个单独appSid
+        appSid_baidu:"c0fb407f",
+
         //百度广告id  激励视频
         bdVideoId_1:"6191756",
         bdVideoId_2:"6191755",
@@ -52,6 +55,7 @@ var AdsMgr = cc.Class({
 
 
         allScreen:false,
+        resizeTime:0,
 
     	//首先确定使用的平台
     	Init:function () {
@@ -198,7 +202,8 @@ var AdsMgr = cc.Class({
 	    ShowBannerAds:function()
 	    {
 	        var self = this;
-
+	        this.resizeTime = 0;
+	        
 	        if(this.bannerAdShowNum == null)
 	            this.bannerAdShowNum = 0;
 	        this.bannerAdShowNum ++;
@@ -255,7 +260,7 @@ var AdsMgr = cc.Class({
 	            console.log("百度的 bannerId = " + this.getBannerAdId());
 	            this.bannerAdCtrl = swan.createBannerAd({
 	                adUnitId: this.getBannerAdId(),
-	                appSid:'c0fb407f',
+	                appSid: this.appSid_baidu,
 	                style: { 
 	                    left: 0,
 	                    top: 0,
@@ -296,7 +301,6 @@ var AdsMgr = cc.Class({
 	            console.log("头条 bannerId = " + this.getBannerAdId());
 	            this.bannerAdCtrl = tt.createBannerAd({
 	                adUnitId: this.getBannerAdId(),
-	                //appSid:'c0fb407f',
 	                style: { 
 	                    left: 0,
 	                    top: 0,
@@ -310,11 +314,14 @@ var AdsMgr = cc.Class({
 	                self.bannerAdCtrl.style.width = 300;
 	           
 	            this.bannerAdCtrl.onResize(res=>{
-	                console.log("重置广告宽度 ");
-	                self.bannerAdCtrl.style.top = WXAD.H-res.height;
-	                self.bannerAdCtrl.style.left = (WXAD.W-res.width)/2;
-	                self.bannerAdCtrl.show();
-	                
+	            	if(self.resizeTime <= 5)//防止头条的反复重置大小
+	            	{
+		                console.log("重置广告宽度 ");
+		                self.bannerAdCtrl.style.top = WXAD.H-res.height;
+		                self.bannerAdCtrl.style.left = (WXAD.W-res.width)/2;
+		                self.bannerAdCtrl.show();
+		                self.resizeTime+=1;
+	            	}	                
 	            }); 
 
 	            this.bannerAdCtrl.onLoad(() => {
@@ -330,7 +337,8 @@ var AdsMgr = cc.Class({
 	    //cb 回调参数 0 播放完成，1 不放未完成 ，-1 视频加载出错
 	    ShowVideoAds:function(adName,cb)
 	    {
-	        this.cb = cb
+	    	this.cb = null;
+	        this.cb = cb;
 	        if(this.platform == "wx")
 	        {
 	            let videoAd = wx.createRewardedVideoAd({
@@ -364,7 +372,7 @@ var AdsMgr = cc.Class({
 
 	            let videoAd = swan.createRewardedVideoAd({
 	                adUnitId: this.getVideoAdId(adName),
-	                appSid: 'ad8b61de'
+	                appSid: this.appSid_baidu,
 	            });
 	            
 	            videoAd.load()

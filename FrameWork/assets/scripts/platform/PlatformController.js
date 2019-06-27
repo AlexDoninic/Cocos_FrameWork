@@ -160,6 +160,21 @@ var PlatformController = cc.Class({
         	}
         },
 
+        //客服入口
+        OpenServiceConversation:function(){
+	    	if(this.platform == "wx")
+	    	{
+	    		wx.openCustomerServiceConversation({
+	    			sessionFrom:'',
+	    			showMessageCard:true,
+	    		});
+	    	}
+	    	else if(this.platform == "tt")
+	    	{
+	    		
+	    	}
+	    },
+
         //右上角的转发按钮
         ShareTopNav:function(){
         	var index = Math.floor(Math.random()*8);
@@ -401,10 +416,31 @@ var PlatformController = cc.Class({
 	    {
 	        if(this.platform == "tt")
 	            return true;
-	        else if(this.platform == "baidu")
-	            return true;
+	        else if(this.platform == "baidu")//百度有基础库版本限制
+	        {
+	        	if(this.CompareSdkVesrion(swan.getSystemInfoSync().SDKVersion, "1.4.1"))
+	        		return true;
+	        	else
+	            	return false;
+	        }
 
 	        return false;
+	    },
+
+	    CompareSdkVesrion:function(sdkV, needV){
+	    	var out1 = sdkV.split('.');
+	    	var out2 = needV.split('.');
+	    	for (var i = 0; i < out1.length; i++) {
+	    		if(parseInt(out1[i]) < parseInt(out2[i]))
+	    		{
+	    			return 0;
+	    		}
+	    		else if(parseInt(out1[i]) > parseInt(out2[i]))
+	    		{
+	    			return 1;
+	    		}
+	    	}
+	    	return 1;
 	    },
 
 	    //开始录屏
@@ -425,7 +461,7 @@ var PlatformController = cc.Class({
 	                this.recorderManager.onStop(res =>{
 	                    console.log("录制结束了: "+res.videoPath);
 	                    self.videoPath = res.videoPath;
-	                    this.onRecordStop();
+	                    self.ShareRecordScreen();
 	                });
 	                
 	                this.recorderManager.onPause(() =>{
